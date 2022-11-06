@@ -3,7 +3,7 @@ This project management app allows user to
 
 **Link to project:** 
 
-<h2 align="center"> <img src="" alt="Gif of App"></h2>
+<h2 align="center"> <img src="" alt="Pic of App"></h2>
 
 ## How It's Made:
 
