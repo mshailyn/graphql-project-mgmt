@@ -25,7 +25,7 @@ app.use('/graphql', graphqlHTTP({
 
 //This will create a middleware.
 //When you navigate to the root page, it would use the built react-app
-app.use(express.static('/client/build'));
+app.use(express.static('../client/build'));
 app.get('*', function (req, res) {
   const index = path.join(__dirname, 'build', 'index.html');
   res.sendFile(index);
