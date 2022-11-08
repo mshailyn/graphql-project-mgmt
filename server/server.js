@@ -1,6 +1,7 @@
 const express = require('express');
 const colors = require('colors');
 const cors = require('cors');
+const path = require("path");
 const app = express();
 const { graphqlHTTP } = require('express-graphql');
 const schema = require('./schema/schema');
@@ -22,6 +23,9 @@ app.use('/graphql', graphqlHTTP({
   graphiql: process.env.NODE_ENV === 'development'
 }))
 
+//This will create a middleware.
+//When you navigate to the root page, it would use the built react-app
+app.use(express.static(path.resolve(__dirname, "./client/build")));
 
 //Server Running
 app.listen(process.env.PORT, () => {
