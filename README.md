@@ -1,7 +1,7 @@
 # GraphQl Project Management App
 This project management app allows users to upload clients and projects for those clients and keep track of everything in one place. Users can edit project details and indicate progress
 
-**Link to project:** 
+**Link to project:** https://graphql-project-mgmt.herokuapp.com/
 
 <h2 align="center"> <img src="client/public/GraphQL Management App.png" alt="Pic of App"></h2>
 
