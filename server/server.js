@@ -25,22 +25,10 @@ app.use('/graphql', graphqlHTTP({
 
 //This will create a middleware.
 //When you navigate to the root page, it would use the built react-app
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(__dirname, '..', 'client', 'build'));
-  app.get("/*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../client/build/index.html"));
-  });
-}
-
-else {
-  app.use(express.static(path.join(__dirname, '../client/public')));
-  app.get("/*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../client/public/index.html"));
-  });
-}
-//app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
-
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+});
 
 
 //Server Running
