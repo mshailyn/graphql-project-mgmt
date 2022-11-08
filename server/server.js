@@ -20,7 +20,7 @@ app.use(cors());
 //Set Up GraphQL
 app.use('/graphql', graphqlHTTP({
   schema,
-  graphiql: process.env.NODE_ENV === 'development'
+  graphiql: true,
 }))
 
 //This will create a middleware.
